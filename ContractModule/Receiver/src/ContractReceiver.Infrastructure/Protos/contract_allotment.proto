@@ -1,0 +1,16 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Infrastructure.Entities";
+package Infrastructure.Protos;
+
+service ContractAllotment {
+  rpc SendContractAllotment(ContractAllotmentRequest) returns (ContractAllotmentResponse);
+}
+
+message ContractAllotmentRequest {
+	bytes Request = 1;
+}
+
+message ContractAllotmentResponse {
+	bool Response = 1;
+}
